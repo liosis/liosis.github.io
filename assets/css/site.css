@@ -66,3 +66,58 @@
 
 /* Six icons in the nav bar: keep them compact */
 #nav ul.icons li a { padding: 0 0.7rem; }
+
+/* News */
+.news-item { margin: 0 0 1rem 0; }
+.news-item:last-child { margin-bottom: 0; }
+.news-item p { font-size: 0.9rem; line-height: 1.8; margin: 0.35rem 0 0 0; text-align: left; }
+
+.news-tag {
+	display: inline-block;
+	padding: 0.15rem 0.6rem;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-size: 0.65rem;
+	font-weight: 900;
+	letter-spacing: 0.075em;
+	text-transform: uppercase;
+	color: #ffffff;
+	background: #212931;
+}
+
+.news-tag.tag-paper { background: #18bfef; }
+.news-tag.tag-conference { background: #212931; }
+.news-tag.tag-teaching { background: #2e9e6b; }
+.news-tag.tag-project { background: #7a5cc4; }
+.news-tag.tag-award { background: #d9a400; }
+.news-tag.tag-upcoming { background: #e2572b; }
+.news-tag.tag-site { background: #909498; }
+
+ul.timeline.news .when { font-size: 0.75rem; text-transform: uppercase; }
+
+/* Latest news on the home page */
+.latest-news { padding-top: 0 !important; }
+.latest-news header.major { margin-bottom: 2rem !important; }
+.latest-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+	text-align: left;
+	margin-bottom: 2rem;
+}
+.latest-grid .latest {
+	border-top: solid 3px #212931;
+	padding-top: 1rem;
+}
+.latest-grid .date {
+	display: block;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-size: 0.75rem;
+	font-weight: 900;
+	letter-spacing: 0.075em;
+	text-transform: uppercase;
+	color: #18bfef;
+	margin-bottom: 0.5rem;
+}
+@media screen and (max-width: 980px) {
+	.latest-grid { grid-template-columns: 1fr; }
+}
