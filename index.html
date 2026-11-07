@@ -6,13 +6,36 @@
 -->
 <html lang="en">
 	<head>
-		<title>Liosis Christos</title>
+		<title>Christos Liosis</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description"
 		      content="Christos Liosis - physicist and CFD researcher at the University of West Attica." />
+
+		<!-- Tab icon (favicon) -->
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+		<link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512.png" />
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
+		<!-- Link preview card (LinkedIn, Viber, Facebook, email...) -->
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Christos Liosis" />
+		<meta property="og:title" content="Christos Liosis" />
+		<meta property="og:description" content="Christos Liosis - physicist and CFD researcher at the University of West Attica." />
+		<meta property="og:url" content="https://liosis.github.io/" />
+		<meta property="og:image" content="https://liosis.github.io/images/og-image.jpg" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<link rel="canonical" href="https://liosis.github.io/" />
+
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="assets/css/site.css" />
+
+		<!-- Visitor statistics (GoatCounter, no cookies) -->
+		<script data-goatcounter="https://liosis.goatcounter.com/count"
+		        async src="//gc.zgo.at/count.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -44,14 +67,12 @@
 							<li><a href="contactinfo.html">Contact</a></li>
 						</ul>
 						<ul class="icons">
-							<li><a href="https://www.researchgate.net/profile/Christos-Liosis"
-							       class="icon brands fa-researchgate"><span class="label">ResearchGate</span></a></li>
-							<li><a href="https://www.linkedin.com/in/YOUR-PROFILE"
-							       class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/liosis"
-							       class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="mailto:liosischristos@uniwa.gr"
-							       class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://scholar.google.com/citations?user=sHupAMQAAAAJ&amp;hl=en" class="icon solid fa-graduation-cap" title="Google Scholar" target="_blank" rel="noopener"><span class="label">Google Scholar</span></a></li>
+							<li><a href="https://www.researchgate.net/profile/Christos-Liosis" class="icon brands fa-researchgate" title="ResearchGate" target="_blank" rel="noopener"><span class="label">ResearchGate</span></a></li>
+							<li><a href="https://orcid.org/0000-0002-4371-480X" class="icon brands fa-orcid" title="ORCID" target="_blank" rel="noopener"><span class="label">ORCID</span></a></li>
+							<li><a href="https://gr.linkedin.com/in/christos-liosis-2b5800100" class="icon brands fa-linkedin" title="LinkedIn" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/liosis" class="icon brands fa-github" title="GitHub" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+							<li><a href="mailto:liosischristos@uniwa.gr" class="icon solid fa-envelope" title="Email"><span class="label">Email</span></a></li>
 						</ul>
 					</nav>
 
@@ -69,9 +90,12 @@
 										Multiphase Flow, Industrial and Environmental Applications
 										and Fluid-Structure Interaction.</p>
 								</header>
-								<a href="http://fluids.uniwa.gr/" class="image main"><img src="images/1.jpg" alt="Flow Analysis and Simulation Team" /></a>
+								<!-- Slideshow: add images to SLIDES in build (images/slides/...) -->
+								<div class="slideshow image main">
+									<figure class="slide active"><img src="images/1.jpg" alt="" /></figure>
+								</div>
 								<ul class="actions special">
-									<li><a href="http://fluids.uniwa.gr/" class="button large">Flow Analysis and Simulation Team</a></li>
+									<li><a href="http://fluids.uniwa.gr/" class="button large" target="_blank" rel="noopener">Flow Analysis and Simulation Team</a></li>
 									<li><a href="publications.html" class="button large primary">Publications</a></li>
 								</ul>
 							</article>
@@ -172,7 +196,7 @@
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; 2026 Liosis Christos</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>&copy; 2026 Liosis Christos</li><li>Design: <a href="https://html5up.net" target="_blank" rel="noopener">HTML5 UP</a></li></ul>
 					</div>
 
 			</div>
@@ -185,6 +209,40 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+		<!-- Slideshow -->
+			<script>
+				(function () {
+					var slides = document.querySelectorAll('.slideshow .slide');
+					if (slides.length < 2) return;
+					var box = document.querySelector('.slideshow');
+					var dots = document.createElement('div');
+					dots.className = 'dots';
+					var i = 0, timer;
+					function show(n) {
+						slides[i].classList.remove('active');
+						dots.children[i].classList.remove('active');
+						i = (n + slides.length) % slides.length;
+						slides[i].classList.add('active');
+						dots.children[i].classList.add('active');
+					}
+					slides.forEach(function (s, n) {
+						var b = document.createElement('button');
+						b.setAttribute('aria-label', 'Image ' + (n + 1));
+						if (n === 0) b.className = 'active';
+						b.onclick = function () { show(n); restart(); };
+						dots.appendChild(b);
+					});
+					box.appendChild(dots);
+					function restart() {
+						clearInterval(timer);
+						timer = setInterval(function () { show(i + 1); }, 5000);
+					}
+					box.addEventListener('mouseenter', function () { clearInterval(timer); });
+					box.addEventListener('mouseleave', restart);
+					restart();
+				})();
+			</script>
 
 	</body>
 </html>
