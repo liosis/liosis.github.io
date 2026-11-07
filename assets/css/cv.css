@@ -1,0 +1,218 @@
+/* CV layout for bio.html - matches the Massively theme */
+
+.cv-intro {
+	display: grid;
+	grid-template-columns: 1.7fr 1fr;
+	gap: 2.5rem;
+	align-items: start;
+	margin-bottom: 2.5rem;
+}
+
+.cv-card {
+	border-left: 4px solid #18bfef;
+	background: #f6f7f8;
+	padding: 1.5rem 1.75rem;
+}
+
+.cv-card dl { margin: 0; }
+
+.cv-card dt {
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-weight: 900;
+	font-size: 0.7rem;
+	letter-spacing: 0.075em;
+	text-transform: uppercase;
+	color: #909498;
+	margin: 0;
+}
+
+.cv-card dd {
+	margin: 0 0 1rem 0;
+	font-size: 0.9rem;
+	line-height: 1.6;
+}
+
+.cv-card dd:last-child { margin-bottom: 0; }
+
+.cv-stats {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+	margin: 0 0 3.5rem 0;
+}
+
+.cv-stats div {
+	border: solid 2px #212931;
+	text-align: center;
+	padding: 1.25rem 0.5rem 1rem;
+}
+
+.cv-stats b {
+	display: block;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-size: 2.5rem;
+	font-weight: 900;
+	line-height: 1;
+	color: #212931;
+}
+
+.cv-stats span {
+	display: block;
+	margin-top: 0.5rem;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-size: 0.7rem;
+	font-weight: 900;
+	letter-spacing: 0.075em;
+	text-transform: uppercase;
+	color: #909498;
+}
+
+h2.cv-h {
+	border-bottom: solid 2px #212931;
+	padding-bottom: 0.6rem;
+	margin: 3.5rem 0 2rem 0;
+}
+
+h2.cv-h .icon { color: #18bfef; margin-right: 0.6rem; }
+
+/* Timeline */
+ul.timeline {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1rem 0;
+}
+
+ul.timeline li {
+	display: grid;
+	grid-template-columns: 8.5rem 1fr;
+	column-gap: 1.75rem;
+	padding: 0;
+	margin: 0;
+}
+
+ul.timeline .when {
+	text-align: right;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-weight: 900;
+	font-size: 0.8rem;
+	letter-spacing: 0.05em;
+	color: #18bfef;
+	padding-top: 0.15rem;
+	white-space: nowrap;
+}
+
+ul.timeline .what {
+	position: relative;
+	border-left: solid 2px #e2e2e2;
+	padding: 0 0 1.9rem 1.75rem;
+}
+
+ul.timeline li:last-child .what { padding-bottom: 0.5rem; }
+
+ul.timeline .what:before {
+	content: "";
+	position: absolute;
+	left: -8px;
+	top: 0.3rem;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: #ffffff;
+	border: solid 3px #18bfef;
+}
+
+ul.timeline .title {
+	display: block;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-weight: 700;
+	font-size: 1.05rem;
+	line-height: 1.4;
+	color: #212931;
+	margin-bottom: 0.25rem;
+}
+
+ul.timeline .where {
+	display: block;
+	font-size: 0.85rem;
+	line-height: 1.7;
+	color: #909498;
+	font-style: italic;
+}
+
+ul.timeline p {
+	font-size: 0.85rem;
+	line-height: 1.8;
+	margin: 0.4rem 0 0 0;
+}
+
+/* Compact timeline (continuing education) */
+ul.timeline.compact .what { padding-bottom: 1rem; }
+ul.timeline.compact .title { font-size: 0.95rem; }
+
+/* Cards */
+.cv-cards {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.25rem;
+}
+
+.cv-cards .box {
+	border: solid 1px #e2e2e2;
+	padding: 1.5rem 1.75rem;
+	margin: 0;
+}
+
+.cv-cards .box h3 {
+	font-size: 0.85rem;
+	margin: 0 0 0.75rem 0;
+}
+
+.cv-cards .box h3 .icon { color: #18bfef; margin-right: 0.5rem; }
+
+.cv-cards .box ul {
+	margin: 0;
+	padding-left: 1.1rem;
+}
+
+.cv-cards .box li,
+.cv-cards .box p {
+	font-size: 0.85rem;
+	line-height: 1.7;
+	margin: 0 0 0.5rem 0;
+}
+
+/* Skill tags */
+.tags { margin: 0 0 1rem 0; }
+
+.tags span {
+	display: inline-block;
+	border: solid 2px #212931;
+	padding: 0.35rem 0.8rem;
+	margin: 0 0.45rem 0.6rem 0;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-weight: 900;
+	font-size: 0.7rem;
+	letter-spacing: 0.075em;
+	text-transform: uppercase;
+	color: #212931;
+}
+
+.tags span.alt {
+	border-color: #18bfef;
+	color: #18bfef;
+}
+
+@media screen and (max-width: 980px) {
+	.cv-intro { grid-template-columns: 1fr; gap: 1.5rem; }
+	.cv-stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media screen and (max-width: 736px) {
+	.cv-cards { grid-template-columns: 1fr; }
+	ul.timeline li { grid-template-columns: 1fr; }
+	ul.timeline .when {
+		text-align: left;
+		padding: 0 0 0.35rem 1.85rem;
+		border-left: solid 2px #e2e2e2;
+	}
+}
