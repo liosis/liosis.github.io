@@ -207,3 +207,26 @@ ol.pubs li { margin-bottom: 1.1rem; }
 	cursor: pointer;
 }
 .pub-links .bibtex .copy-btn:hover { background: #18bfef; }
+
+/* Abstract box (hover on desktop, button on mobile) */
+.pub-links .abstract {
+	margin: 0.75rem 0 0.25rem 0;
+	padding: 0.9rem 1.1rem;
+	background: #f6f7f8;
+	border-left: solid 3px #212931;
+	animation: absFade 0.25s ease;
+}
+.pub-links .abstract[hidden] { display: none; }
+.pub-links .abstract p {
+	margin: 0 0 0.4rem 0;
+	font-size: 0.85rem;
+	line-height: 1.75;
+	text-align: left;
+}
+.pub-links .abs-note {
+	display: block;
+	font-size: 0.7rem;
+	color: #909498;
+	font-style: italic;
+}
+@keyframes absFade { from { opacity: 0; } to { opacity: 1; } }
