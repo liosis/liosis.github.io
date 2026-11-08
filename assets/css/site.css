@@ -139,3 +139,33 @@ ul.timeline.news .when { font-size: 0.75rem; text-transform: uppercase; }
 .slideshow { background: #ffffff; border: solid 1px #e2e2e2; }
 .slideshow .slide img { object-fit: contain; }
 .news-tag.tag-talk { background: #c2185b; }
+
+/* Publications by year */
+h3.pub-year {
+	font-size: 1.1rem;
+	color: #18bfef;
+	border-bottom: solid 1px #e2e2e2;
+	padding-bottom: 0.3rem;
+	margin: 2rem 0 1rem 0;
+}
+ol.pubs li { margin-bottom: 1.1rem; }
+.pub-links { display: block; margin-top: 0.4rem; }
+.pub-links .button {
+	height: 2rem;
+	line-height: 2rem;
+	padding: 0 1rem;
+	font-size: 0.6rem;
+	margin-right: 0.3rem;
+}
+
+/* Portrait in the bio card */
+.cv-card img.portrait {
+	display: block;
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: solid 4px #ffffff;
+	box-shadow: 0 0 0 2px #18bfef;
+	margin: 0 auto 1.5rem auto;
+}
