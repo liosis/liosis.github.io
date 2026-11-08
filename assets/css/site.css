@@ -171,16 +171,39 @@ ol.pubs li { margin-bottom: 1.1rem; }
 }
 
 /* Cite / BibTeX box */
-.pub-links .bibtex { display: none; margin-top: 0.75rem; }
-.pub-links .bibtex.open { display: block; }
-.pub-links .bibtex pre {
+.pub-links .bibtex {
+	position: relative;
+	margin: 0.75rem 0 0.25rem 0;
+	padding: 0.9rem 5.5rem 0.9rem 1.1rem;
 	background: #f6f7f8;
-	border-left: 3px solid #18bfef;
-	padding: 0.9rem 1.1rem;
-	margin: 0 0 0.6rem 0;
+	border-left: solid 3px #18bfef;
+}
+.pub-links .bibtex[hidden] { display: none; }
+.pub-links .bibtex pre {
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: 0;
+	font-family: "Courier New", Courier, monospace;
 	font-size: 0.72rem;
-	line-height: 1.6;
+	line-height: 1.55;
 	white-space: pre-wrap;
 	word-break: break-word;
-	font-family: "Courier New", monospace;
+	overflow-x: auto;
+	color: #212931;
 }
+.pub-links .bibtex .copy-btn {
+	position: absolute;
+	top: 0.6rem;
+	right: 0.6rem;
+	height: 1.9rem;
+	line-height: 1.9rem;
+	padding: 0 0.9rem;
+	font-size: 0.6rem;
+	background: #212931;
+	color: #ffffff !important;
+	box-shadow: none;
+	border: 0;
+	cursor: pointer;
+}
+.pub-links .bibtex .copy-btn:hover { background: #18bfef; }
