@@ -134,3 +134,8 @@ ul.timeline.news .when { font-size: 0.75rem; text-transform: uppercase; }
 	max-width: 220px;
 	height: auto;
 }
+
+/* Slides are figures on white */
+.slideshow { background: #ffffff; border: solid 1px #e2e2e2; }
+.slideshow .slide img { object-fit: contain; }
+.news-tag.tag-talk { background: #c2185b; }
