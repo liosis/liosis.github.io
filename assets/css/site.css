@@ -244,3 +244,14 @@ ol.pubs li { margin-bottom: 1.1rem; }
 	padding: 0;
 	margin: 0;
 }
+
+/* Patents */
+.patent-desc {
+	display: block;
+	margin-top: 0.3rem;
+	font-size: 0.85rem;
+	color: #555;
+	font-style: italic;
+	line-height: 1.7;
+}
+.news-tag.tag-patent { background: #00897b; }
